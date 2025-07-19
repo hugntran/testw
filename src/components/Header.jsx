@@ -28,7 +28,7 @@ export default function Header() {
 
       {/* Desktop Nav */}
       <nav className="font-newyorkSmall hidden md:flex text-[20px] uppercase h-full">
-        {['/', '/about', '/projects', '/readme'].map((href, i) => {
+        {['/home', '/about', '/', '/readme'].map((href, i) => {
           const label = ['Blog', 'About', 'Projects', 'Read me'][i];
           return (
             <a
@@ -49,9 +49,9 @@ export default function Header() {
         </button>
         {isOpen && (
           <div className="font-newyorkSmall absolute top-full left-0 right-0 bg-white border-t p-4 flex flex-col items-center gap-3 text-sm uppercase z-10 text-center ">
-            <a href="/" className={isActive('/')}>Blog</a>
+            <a href="/home" className={isActive('/home')}>Blog</a>
             <a href="/about" className={isActive('/about')}>About</a>
-            <a href="/projects" className={isActive('/projects')}>Projects</a>
+            <a href="/" className={isActive('/')}>Projects</a>
             <a href="/readme" className={isActive('/readme')}>Read me</a>
           </div>
         )}
